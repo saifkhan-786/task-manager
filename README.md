@@ -25,3 +25,29 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# Task Manager
+
+This is a simple task manager application built with Angular.
+
+## Features
+
+- Add, edit, delete, and toggle tasks.
+- Persist tasks using LocalStorage.
+- Responsive design with Bootstrap.
+- Angular reactive forms for task management.
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v12 or later)
+- [Angular CLI](https://angular.io/cli)
+
+### Installation
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-username/your-repository.git
+   cd your-repository
+   ```

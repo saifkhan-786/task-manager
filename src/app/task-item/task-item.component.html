@@ -1,0 +1,25 @@
+<div [class.completed]="task.completed">
+    <div *ngIf="!task.editMode" class="d-flex justify-content-between align-items-center">
+        <div>
+            <h5>{{ task.title }}</h5>
+            <p>{{ task.description }}</p>
+        </div>
+        <div>
+            <button (click)="onToggle()" class="btn btn-outline-secondary">
+                {{ task.completed ? 'Undo' : 'Complete' }}
+            </button>
+            <button (click)="onEdit()" class="btn btn-outline-info margin-left-btn">Edit</button>
+            <button (click)="onDelete()" class="btn btn-danger margin-left-btn">Delete</button>
+        </div>
+    </div>
+    <div *ngIf="task.editMode" class="d-flex justify-content-between align-items-center">
+        <div>
+            <input [(ngModel)]="task.title" class="form-control" placeholder="Title" />
+            <textarea [(ngModel)]="task.description" class="form-control mt-2" placeholder="Description"></textarea>
+        </div>
+        <div>
+            <button (click)="onSave(task.title, task.description)" class="btn btn-success">Save</button>
+            <button (click)="onEdit()" class="btn btn-secondary margin-left-btn">Cancel</button>
+        </div>
+    </div>
+</div>

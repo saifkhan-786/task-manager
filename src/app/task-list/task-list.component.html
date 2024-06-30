@@ -1,0 +1,8 @@
+<div class="container mt-3">
+    <div class="list-group">
+        <div *ngFor="let task of tasks" class="list-group-item">
+            <app-task-item [task]="task" (delete)="deleteTask(task.id)"
+                (toggle)="toggleCompletion(task.id)"></app-task-item>
+        </div>
+    </div>
+</div>
